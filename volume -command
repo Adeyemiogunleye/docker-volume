@@ -1,1 +1,2 @@
 docker run --volumes-from myapp -v jenkins_copy:/target --user root jenkins/jenkins:lts sh -c "cp -rp /var/jenkins_home/. /target"
+docker volume create enter_volume_name
