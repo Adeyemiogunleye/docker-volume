@@ -1,3 +1,4 @@
 docker run --volumes-from myapp -v jenkins_copy:/target --user root jenkins/jenkins:lts sh -c "cp -rp /var/jenkins_home/. /target"
 docker volume create enter_volume_name
 docker run --name test -v jenkins_copy:/var/jenkins_home -d -p 3000:8080 jenkins/jenkins:lts
+docker run --name test --mount source=volume2,target=/app nginx:latest
